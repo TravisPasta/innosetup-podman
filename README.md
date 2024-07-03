@@ -11,6 +11,10 @@ contained in the parent images:
 # Setup
 - Install Podman
 - Download git repository
+-( make repository files accessible with 777 permissions ):
+```sh
+sudo chmod 777 innosetup-podman/ -R
+```
 - enter repository and execute:
 ```sh
 podman build -t inno-container .
@@ -21,7 +25,7 @@ Run in interactive mode with your source root bound to `/work`; specify your
 setup script as the command:
 
 ```sh
-docker run --rm -i -v $PWD:/work amake/innosetup helloworld.iss
+podman run --rm -i -v $PWD:/work inno-container helloworld.iss
 ```
 
 Put the following wrapper script in your PATH as e.g. `iscc` to be able to run

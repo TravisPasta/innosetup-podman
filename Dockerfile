@@ -1,6 +1,10 @@
 FROM docker.io/amake/wine:buster as inno
 MAINTAINER Aaron Madlon-Kay <aaron@madlon-kay.com>
 
+# addition to avoid folder restrictions
+COPY ./entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
+
 USER root
 
 RUN apt-get update \

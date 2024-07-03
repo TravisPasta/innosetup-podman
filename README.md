@@ -8,6 +8,14 @@ contained in the parent images:
 
 - [Inno Setup](http://www.jrsoftware.org/isinfo.php) (Unicode version)
 
+# Setup
+- Install Podman
+- Download git repository
+- enter repository and execute:
+```sh
+podman build -t inno-container .
+```
+
 # Usage
 Run in interactive mode with your source root bound to `/work`; specify your
 setup script as the command:

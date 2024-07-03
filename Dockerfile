@@ -1,4 +1,4 @@
-FROM amake/wine:buster as inno
+FROM docker.io/amake/wine:buster as inno
 MAINTAINER Aaron Madlon-Kay <aaron@madlon-kay.com>
 
 USER root
@@ -35,7 +35,7 @@ RUN cd "/home/xclient/.wine/drive_c/Program Files/Inno Setup 6/Languages" \
     && curl -L "https://api.github.com/repos/jrsoftware/issrc/tarball/is-6_3_1" \
     | tar xz --strip-components=4 --wildcards "*/Files/Languages/Unofficial/*.isl"
 
-FROM debian:buster-slim
+FROM docker.io/debian:buster-slim
 
 RUN addgroup --system xusers \
     && adduser \

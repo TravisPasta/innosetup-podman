@@ -15,6 +15,10 @@ contained in the parent images:
 ```sh
 sudo chmod 777 innosetup-podman/ -R
 ```
+- pull docker image for the container by amake: (avoids restrictions with podman and docker.io repositories)
+```sh
+podman pull docker.io/amake/wine:buster
+```
 - enter repository and execute:
 ```sh
 podman build -t inno-container .

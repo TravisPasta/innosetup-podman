@@ -1,3 +1,11 @@
+# Important
+This repo is not created by me. It is merely a fork of the [original Repo](https://github.com/amake/innosetup-docker) by [Amake](https://github.com/amake). The Repo is meant to make Innosetup available on all platforms by using a Docker container as the base.
+
+This repo is meant to focus on the use of podman as an alternative to docker.
+
+---
+The following is created by the original creator [Amake](https://github.com/amake):
+
 # About
 An easy way to create Inno Setup installer packages for Microsoft Windows
 directly from your Linux or macOS box.
